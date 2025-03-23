@@ -65,11 +65,8 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .contact-form input[type="text"],
-        .contact-form input[type="email"] {
-            width: 80%;
+        .contact-form input {
             padding: 12px;
-            margin-bottom: 12px;
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
@@ -111,27 +108,27 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Guarderia per a Plantes">
+        <img src="logo.png" alt="Logo de Guarderia per a Plantes"> <!-- Falta texto alternativo -->
         <h1>Guarderia per a Plantes</h1>
         <nav>
-            <a href="#info">Informació</a>
-            <a href="#promocio">Promoció</a>
-            <a href="#ofertes">Ofertes</a>
-            <a href="#preus">Preus</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#contacte">Contacte</a>
+            <a href="#">Informació</a>
+            <a href="#">Promoció</a>
+            <a href="#">Ofertes</a>
+            <a href="#">Preus</a>
+            <a href="#">Galeria</a>
+            <a href="#">Contacte</a>
         </nav>
     </header>
     
     <div class="container">
         <section id="info">
             <h2>Sobre nosaltres</h2>
-            <p>Oferim servei de guarderia i reg per a les teves plantes quan no ets a casa.</p>
+            <p style="color: yellow;">Oferim servei de guarderia i reg per a les teves plantes quan no ets a casa.</p> <!-- El color groc té poc contrast -->
         </section>
         
         <section id="promocio">
             <h2>Promoció</h2>
-            <p>Registra't avui i aconsegueix un 10% de descompte en el teu primer servei.</p>
+            <p>Registra't avui i aconsegueix un <span style="font-size: 10px;">10% de descompte</span> en el teu primer servei.</p> <!-- El text és massa petit -->
         </section>
         
         <section id="ofertes">
@@ -141,36 +138,34 @@
         
         <section id="preus">
             <h2>Preus</h2>
-            <p>Des de només 5€ al dia, cuida les teves plantes amb nosaltres!</p>
+            <p>Des de només <span style="background-color: red;">5€ al dia</span>, cuida les teves plantes amb nosaltres!</p> <!-- Fons vermell amb text negre pot tenir baix contrast -->
         </section>
 
         <section id="galeria" class="gallery">
             <h2>Galeria</h2>
-            <img src="plant1.jpg" alt="Planta 1">
-            <img src="plant2.jpg" alt="Planta 2">
-            <img src="plant3.jpg" alt="Planta 3">
+            <img src="plant1.jpg" alt="Planta 1"> <!-- Falta texto alternativo -->
+            <img src="plant2.jpg" alt="Planta 2"> <!-- Falta texto alternativo -->
+            <img src="plant3.jpg" alt="Planta 3"> <!-- Falta texto alternativo -->
         </section>
         
         <section id="contacte" class="contact-form">
             <h2>Contacta'ns</h2>
             <form>
-                <label>Nom:</label>
-                <input type="text" name="name" placeholder="Introdueix el teu nom">
-                <label>Email:</label>
-                <input type="email" name="email" placeholder="Introdueix el teu email">
+                <input type="text" placeholder="Nom" aria-label="Nom"> <!-- Falta etiqueta associada -->
+                <input type="email" placeholder="Email" aria-label="Email"> <!-- Falta etiqueta associada -->
                 <input type="submit" value="Enviar">
             </form>
         </section>
         
         <section class="map">
             <h2>Mapa</h2>
-            <iframe src="https://www.google.com/maps/embed?..." width="600" height="450"></iframe>
+            <iframe src=""></iframe> <!-- Falta una URL válida -->
         </section>
     </div>
 
     <footer>
         <p>&copy; 2025 Guarderia per a Plantes. Tots els drets reservats.</p>
-        <p>Contacte: info@guarderiaplantes.com | Tel: +34 123 456 789</p>
+        <p>Contacte: <span style="color: black;">info@guarderiaplantes.com</span> | Tel: +34 123 456 789</p> <!-- Text negre sobre fons fosc pot ser difícil de llegir -->
     </footer>
 </body>
 </html>
